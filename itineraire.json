@@ -1,0 +1,275 @@
+{
+  "pays": "France",
+  "drapeau": "🇫🇷",
+  "symbole": "🐓",
+  "titre": "L'Alsace Enchantée: Magie d'Hiver et Traditions",
+  "budget_total": "2700€",
+  "duree": "8 jours",
+  "date_debut": "2025-12-27",
+  "date_fin": "2026-01-04",
+  "temps_vol": "Environ 14h avec escale depuis Olivier, Haiti",
+  "jours": [
+    {
+      "jour": 1,
+      "symbole": "🛬",
+      "titre": "Arrivée à Strasbourg, Douce Immersion",
+      "legende": "Après un long voyage, la capitale alsacienne vous accueille avec son charme hivernal. Prenez le temps de vous installer et de faire une première découverte tranquille des environs de votre hôtel, en vous imprégnant de l'atmosphère unique de la ville.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "🛬 <strong>Arrivée et installation</strong>: Atterrissez à l'aéroport de Strasbourg (SXB) ou arrivez en TGV depuis Paris. Rejoignez votre hôtel 3 étoiles pour déposer vos bagages et vous rafraîchir après le voyage.",
+        "🚶‍♂️ <strong>Première balade découverte</strong>: Promenez-vous dans les rues adjacentes à votre hébergement. Laissez-vous charmer par l'architecture typique et les lumières hivernales, une introduction douce à la ville."
+      ],
+      "illustration": "jour1.jpg",
+      "encarts": [
+        {
+          "symbole": "ℹ️",
+          "titre": "Conseil d'arrivée",
+          "texte": "Depuis l'aéroport de Strasbourg, une navette train relie la gare centrale en moins de 10 minutes, très pratique pour rejoindre le centre-ville."
+        }
+      ]
+    },
+    {
+      "jour": 2,
+      "symbole": "🎄",
+      "titre": "Cœur Historique et Lumières de Noël",
+      "legende": "Plongez au cœur de Strasbourg, classée au patrimoine mondial de l'UNESCO. La journée sera dédiée à l'exploration de ses sites emblématiques, encore parés de leurs décorations de fin d'année, offrant une ambiance féerique et inoubliable.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "⛪ <strong>Majestueuse Cathédrale Notre-Dame</strong>: Admirez la façade gothique de la Cathédrale Notre-Dame et son horloge astronomique, un chef-d'œuvre médiéval qui raconte le temps de manière fascinante. Montez à la plateforme pour une vue imprenable sur la ville.",
+        "🏘️ <strong>Flânerie dans la Petite France</strong>: Perdez-vous dans les ruelles pavées de la Petite France, le quartier le plus pittoresque de Strasbourg, avec ses maisons à colombages et ses canaux. C'est l'endroit idéal pour des photos mémorables.",
+        "🍷 <strong>Dégustation de vin chaud et bredele</strong>: Profitez de l'ambiance des derniers marchés de Noël ou des chalets éphémères pour savourer un vin chaud épicé et des \"bredele\", les petits gâteaux de Noël alsaciens."
+      ],
+      "illustration": "jour2.jpg",
+      "encarts": [
+        {
+          "symbole": "💡",
+          "titre": "Astuce Cathédrale",
+          "texte": "Arrivez tôt le matin pour visiter la Cathédrale et monter à la plateforme, afin d'éviter les foules et profiter pleinement de la vue."
+        },
+        {
+          "symbole": "📸",
+          "titre": "Spot photo",
+          "texte": "Les Ponts Couverts et le Barrage Vauban offrent des panoramas superbes sur la Petite France, surtout au coucher du soleil."
+        }
+      ]
+    },
+    {
+      "jour": 3,
+      "symbole": "🏛️",
+      "titre": "Culture et Institutions Européennes",
+      "legende": "Strasbourg n'est pas seulement historique, c'est aussi un centre européen majeur. Cette journée vous fera découvrir son rôle international et ses musées riches en histoire et en art, offrant un contraste intéressant avec le charme médiéval de la veille.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "🇪🇺 <strong>Visite du Parlement Européen</strong>: Explorez le \"Parlamentarium\" ou assistez à une séance plénière (selon le calendrier). Découvrez le fonctionnement de cette institution clé de l'Union Européenne.",
+        "🖼️ <strong>Musée Alsacien ou Musée des Beaux-Arts</strong>: Choisissez entre le Musée Alsacien pour une immersion dans les traditions populaires régionales, ou le Musée des Beaux-Arts pour admirer des œuvres de grands maîtres européens. Les deux offrent une richesse culturelle unique."
+      ],
+      "illustration": "jour3.jpg",
+      "encarts": [
+        {
+          "symbole": "🚌",
+          "titre": "Accès Parlement",
+          "texte": "Le Parlement Européen est accessible en tramway (ligne E, arrêt \"Droits de l'Homme\"). Prévoyez une pièce d'identité pour la visite."
+        },
+        {
+          "symbole": "👨‍👩‍👧‍👦",
+          "titre": "Pour les familles",
+          "texte": "Le Vaisseau, un centre de découverte scientifique, est une excellente option pour les enfants et les adultes curieux."
+        }
+      ]
+    },
+    {
+      "jour": 4,
+      "symbole": "🏰",
+      "titre": "Évasion au Château du Haut-Kœnigsbourg",
+      "legende": "Aujourd'hui, quittez la ville pour une excursion majestueuse. Le Château du Haut-Kœnigsbourg, perché sur sa montagne, offre une plongée fascinante dans l'histoire médiévale de l'Alsace et des vues panoramiques époustouflantes sur la plaine.",
+      "lieu": "Château du Haut-Kœnigsbourg et Route des Vins",
+      "activites": [
+        "🏰 <strong>Exploration du Château du Haut-Kœnigsbourg</strong>: Visitez cette forteresse médiévale entièrement restaurée. Ses salles, son donjon et ses remparts vous transporteront à travers les siècles. La vue sur la plaine d'Alsace est spectaculaire.",
+        "🍇 <strong>Découverte d'un village de la Route des Vins</strong>: Sur le chemin du retour, arrêtez-vous dans un charmant village alsacien comme Riquewihr ou Ribeauvillé. Flânez dans ses rues colorées et dégustez un vin local dans une cave traditionnelle."
+      ],
+      "illustration": "jour4.jpg",
+      "encarts": [
+        {
+          "symbole": "🚗",
+          "titre": "Transport",
+          "texte": "La location d'une voiture est recommandée pour cette journée afin de profiter pleinement de la flexibilité et des paysages de la Route des Vins. Des navettes existent aussi depuis Sélestat."
+        },
+        {
+          "symbole": "🍷",
+          "titre": "Dégustation",
+          "texte": "N'hésitez pas à entrer dans une cave pour une dégustation de Riesling ou de Gewürztraminer, des vins emblématiques d'Alsace."
+        }
+      ]
+    },
+    {
+      "jour": 5,
+      "symbole": "🎆",
+      "titre": "Réveillon du Nouvel An à Strasbourg",
+      "legende": "Préparez-vous à célébrer le passage à la nouvelle année dans l'ambiance festive de Strasbourg. La journée sera plus détendue pour vous permettre de vous préparer à la soirée spéciale, entre dîner gastronomique et festivités urbaines.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "🛍️ <strong>Shopping et dernières emplettes</strong>: Profitez de la matinée pour faire du shopping dans les boutiques du centre-ville ou acheter des souvenirs. C'est aussi l'occasion de trouver une tenue pour la soirée du réveillon.",
+        "🍽️ <strong>Dîner de Réveillon</strong>: Réservez une table dans un restaurant proposant un menu spécial Nouvel An. L'Alsace est réputée pour sa gastronomie, une belle occasion de savourer des plats raffinés.",
+        "🎉 <strong>Festivités du Nouvel An</strong>: Rejoignez les places principales de Strasbourg pour assister aux animations et au compte à rebours. Les feux d'artifice sont généralement interdits en centre-ville, mais l'ambiance reste très festive et conviviale."
+      ],
+      "illustration": "jour5.jpg",
+      "encarts": [
+        {
+          "symbole": "🍽️",
+          "titre": "Réservation",
+          "texte": "Il est impératif de réserver votre restaurant pour le dîner du 31 décembre plusieurs semaines à l'avance, les places sont très prisées."
+        },
+        {
+          "symbole": "🥂",
+          "titre": "Tradition",
+          "texte": "Le \"Crémant d'Alsace\" est le vin effervescent local, parfait pour trinquer à la nouvelle année."
+        }
+      ]
+    },
+    {
+      "jour": 6,
+      "symbole": "🥂",
+      "titre": "Jour de l'An et Détente",
+      "legende": "Après les festivités de la veille, cette journée sera placée sous le signe de la détente et de la récupération. Profitez de la tranquillité du Jour de l'An pour vous reposer, faire une balade paisible ou visiter un lieu moins fréquenté.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "😴 <strong>Matinée libre et brunch</strong>: Commencez l'année en douceur avec une grasse matinée. De nombreux hôtels et restaurants proposent des brunchs spéciaux pour le Jour de l'An, une excellente option pour un repas tardif et copieux.",
+        "🚶‍♀️ <strong>Balade au Parc de l'Orangerie</strong>: Profitez de l'après-midi pour une promenade relaxante au Parc de l'Orangerie. C'est le plus ancien parc de Strasbourg, idéal pour prendre l'air et admirer les cigognes, emblèmes de l'Alsace."
+      ],
+      "illustration": "jour6.jpg",
+      "encarts": [
+        {
+          "symbole": "⚠️",
+          "titre": "Ouvertures",
+          "texte": "De nombreux commerces et musées sont fermés le 1er janvier. Vérifiez les horaires à l'avance pour les activités prévues."
+        },
+        {
+          "symbole": "🦢",
+          "titre": "Les cigognes",
+          "texte": "Le Parc de l'Orangerie abrite un centre de réintroduction des cigognes, vous aurez de bonnes chances d'en apercevoir."
+        }
+      ]
+    },
+    {
+      "jour": 7,
+      "symbole": "🏘️",
+      "titre": "Charme de Colmar et ses Environs",
+      "legende": "Aujourd'hui, partez à la découverte de Colmar, souvent surnommée la \"Petite Venise\" d'Alsace. Ses quartiers pittoresques et son ambiance unique en font une étape incontournable, complétée par la visite d'un village voisin.",
+      "lieu": "Colmar et Eguisheim",
+      "activites": [
+        "🛶 <strong>Exploration de la Petite Venise de Colmar</strong>: Flânez dans le quartier de la Petite Venise, admirez les maisons colorées à colombages le long des canaux. Une balade en barque est possible si le temps le permet, offrant une perspective différente.",
+        "🎨 <strong>Musée Unterlinden et Retable d'Issenheim</strong>: Visitez le célèbre Musée Unterlinden, qui abrite le chef-d'œuvre de Grünewald, le Retable d'Issenheim. C'est une expérience artistique et spirituelle majeure.",
+        "🌸 <strong>Visite d'Eguisheim, village préféré des Français</strong>: Terminez la journée par Eguisheim, un village circulaire classé parmi les plus beaux de France. Ses ruelles fleuries (même en hiver, le charme opère) et son architecture médiévale sont un enchantement."
+      ],
+      "illustration": "jour7.jpg",
+      "encarts": [
+        {
+          "symbole": "🚆",
+          "titre": "Accès à Colmar",
+          "texte": "Colmar est facilement accessible en train depuis Strasbourg (environ 30 minutes). Des bus locaux desservent ensuite Eguisheim."
+        },
+        {
+          "symbole": "🍽️",
+          "titre": "Spécialité locale",
+          "texte": "Goûtez la \"tarte flambée\" (Flammekueche), une spécialité alsacienne à base de pâte fine, crème, oignons et lardons, souvent cuite au feu de bois."
+        }
+      ]
+    },
+    {
+      "jour": 8,
+      "symbole": "🛫",
+      "titre": "Derniers Instants et Départ",
+      "legende": "C'est le dernier jour de votre séjour alsacien. Profitez de ces dernières heures pour faire quelques achats de dernière minute, savourer un dernier repas typique ou revisiter un lieu coup de cœur avant de prendre le chemin du retour, la tête pleine de souvenirs.",
+      "lieu": "Strasbourg",
+      "activites": [
+        "🎁 <strong>Achats de souvenirs ou marché couvert</strong>: Faites vos dernières emplettes de produits locaux (moutarde, pain d'épices, poteries) ou visitez le marché couvert de Strasbourg pour des spécialités gourmandes.",
+        "🍽️ <strong>Dernier repas alsacien</strong>: Savourez un dernier repas dans un \"winstub\" traditionnel, pour goûter une dernière fois aux saveurs de l'Alsace avant votre départ.",
+        "🛫 <strong>Départ de Strasbourg</strong>: Rejoignez l'aéroport de Strasbourg (SXB) ou la gare TGV pour votre vol ou train de retour vers Olivier, Haiti, via Paris ou une autre grande ville."
+      ],
+      "illustration": "jour8.jpg",
+      "encarts": [
+        {
+          "symbole": "⏰",
+          "titre": "Temps de trajet",
+          "texte": "Prévoyez suffisamment de temps pour le trajet vers l'aéroport ou la gare, surtout si vous avez des correspondances serrées."
+        },
+        {
+          "symbole": "✈️",
+          "titre": "Enregistrement",
+          "texte": "Vérifiez les exigences d'enregistrement et de bagages de votre compagnie aérienne avant de partir pour l'aéroport."
+        }
+      ]
+    }
+  ],
+  "detail_budget": [
+    {
+      "titre": "Budget vol:",
+      "legende": "1200€/pers (Vol aller-retour Olivier, Haiti - Strasbourg, France avec escale, classe économique)",
+      "symbole": "🛬"
+    },
+    {
+      "titre": "Budget transports:",
+      "legende": "250€/pers (TGV Paris-Strasbourg, transports en commun Strasbourg, location voiture 1 jour ou navettes)",
+      "symbole": "🚆"
+    },
+    {
+      "titre": "Budget repas:",
+      "legende": "400€/pers (8 jours, repas de type moyen, incluant un dîner de réveillon)",
+      "symbole": "🥗"
+    },
+    {
+      "titre": "Budget logement:",
+      "legende": "700€/pers (7 nuits en hôtel 3 étoiles, base chambre double partagée)",
+      "symbole": "🛏️"
+    },
+    {
+      "titre": "Budget activités:",
+      "legende": "150€/pers (Entrées musées, château, dégustations, petites activités)",
+      "symbole": "🎭"
+    }
+  ],
+  "periodes_ideales": [
+    {
+      "titre": "Les périodes idéales pour ce séjour sont les mois de décembre et janvier pour l'ambiance des marchés de Noël et les festivités de fin d'année.",
+      "symbole": "🎄"
+    }
+  ],
+  "infos_pratiques": [
+    {
+      "titre": "La population alsacienne est réputée pour son sens de l'accueil et sa fierté de ses traditions. Le français est la langue officielle, mais l'allemand est aussi parlé par certains, et l'alsacien est un dialecte régional.",
+      "symbole": "🗣️"
+    },
+    {
+      "titre": "La France est un pays de l'Union Européenne, la monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, mais un peu de liquide est utile pour les petits commerces ou marchés.",
+      "symbole": "💳"
+    },
+    {
+      "titre": "En hiver (décembre-janvier), les températures en Alsace peuvent être froides, souvent entre 0°C et 5°C, avec des possibilités de neige. Prévoyez des vêtements chauds, un manteau imperméable, des gants et un bonnet.",
+      "symbole": "❄️"
+    },
+    {
+      "titre": "Une info insolite: Strasbourg est la seule ville au monde dont le centre historique est entièrement classé au patrimoine mondial de l'UNESCO. C'est aussi la capitale européenne de Noël!",
+      "symbole": "✨"
+    }
+  ],
+  "liens_utiles": [
+    {
+      "legende": "Office de Tourisme de Strasbourg",
+      "titre": "Strasbourg Tourisme",
+      "url": "https://www.visitstrasbourg.fr/",
+      "symbole": "📘"
+    },
+    {
+      "legende": "Informations sur les trains en France",
+      "titre": "SNCF Connect",
+      "url": "https://www.sncf-connect.com/",
+      "symbole": "🚆"
+    },
+    {
+      "legende": "Prévisions météo pour l'Alsace",
+      "titre": "Météo France",
+      "url": "https://www.meteofrance.com/previsions-meteo-france/alsace/67",
+      "symbole": "🌤️"
+    }
+  ]
+}
