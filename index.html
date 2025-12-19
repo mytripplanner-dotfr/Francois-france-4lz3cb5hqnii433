@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Alsace Enchantée: Magie d'Hiver et Traditions </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      template: {
+                          sable: '#FFEDD5', 
+                          ocre: '#F97316',   // Orange Vibrant (Brand Accent)
+                          roche: '#0F172A',  // Bleu Nuit (Brand Dark)
+                          ciel: '#0D9488',   // Vert Lagon (Brand Primary)
+                          bg: '#FFF7ED'      // C'est un blanc cassé chaud, parfait pour la lecture et le contraste.
+                      }
+                  },
+                  fontFamily: {
+                      sans: ['"Plus Jakarta Sans"', 'sans-serif'], // Nouvelle police corps
+                      serif: ['"Outfit"', 'sans-serif'],           // Nouvelle police titres
+                  }
+              }
+          }
+      }
+    </script>
+    <style>
+        body { overflow-x: hidden; }
+        
+        /* 2. FORÇAGE DES GRAISSES (Comme sur la Landing Page) */
+        .font-sans { font-weight: 600 !important; }
+        .font-serif { font-weight: 800 !important; }
+
+        /* Ligne verticale de la timeline */
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #E5E7EB;
+            z-index: 0;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line { left: 50%; margin-left: -1px; }
+        }
+
+        /* Style des cartes Info */
+        .tip-card {
+            border-left: 4px solid #F97316; /* ocre */
+            background-color: #FFF7ED;
+        }
+
+        /* Masquer la scrollbar de la nav mobile tout en gardant le scroll */
+        .hide-scroll::-webkit-scrollbar { display: none; }
+        .hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-template-bg text-template-roche antialiased">
+    
+    <nav id="nav-desktop" class="hidden md:flex fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-gray-200 py-4 px-8 justify-between items-center shadow-sm transition-transform duration-300 -translate-y-full">
+        <a href="#top" class="text-xl font-serif font-bold tracking-widest text-template-roche">MyTrip<span class="text-template-ocre">Planner</span></a>
+        <div class="space-x-6 text-sm font-bold text-gray-600">
+            <a href="#jour-1" class="nav-item-desktop hover:text-template-ocre transition">Le Parcours</a>
+            <a href="#pratique" class="nav-item-desktop hover:text-template-ocre transition">Infos Pratiques</a>
+        </div>
+    </nav>
+
+    <nav id="nav-mobile" class="md:hidden fixed top-0 w-full z-50 bg-white/95 backdrop-blur border-b border-gray-200 py-3 pl-4 overflow-x-auto hide-scroll whitespace-nowrap shadow-md transition-transform duration-300 -translate-y-full">
+        <div class="flex space-x-2 pr-4" id="mobile-menu-container">
+            <a href="#top" class="inline-block px-3 py-1 bg-template-roche text-white rounded-full text-xs font-bold shadow-sm">Top</a>
+            
+                <a href="#jour-1" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J1 Arrivée à Strasbourg, Douce Immersion</a>
+            
+                <a href="#jour-2" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J2 Cœur Historique et Lumières de Noël</a>
+            
+                <a href="#jour-3" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J3 Culture et Institutions Européennes</a>
+            
+                <a href="#jour-4" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J4 Évasion au Château du Haut-Kœnigsbourg</a>
+            
+                <a href="#jour-5" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J5 Réveillon du Nouvel An à Strasbourg</a>
+            
+                <a href="#jour-6" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J6 Jour de l'An et Détente</a>
+            
+                <a href="#jour-7" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J7 Charme de Colmar et ses Environs</a>
+            
+                <a href="#jour-8" class="mobile-link inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-bold hover:bg-template-sable transition-all duration-300">J8 Derniers Instants et Départ</a>
+            
+            <a href="#pratique" class="mobile-link inline-block px-3 py-1 border border-gray-300 text-gray-500 rounded-full text-xs font-bold">Infos</a>
+        </div>
+    </nav>
+
+    <header id="top" class="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/header.png" || 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2021'}');">
+        
+        <div class="relative z-20 text-center text-white px-4 max-w-3xl animate-fade-in-up">
+            <p class="font-sans text-template-sable tracking-[0.2em] mb-4 uppercase text-xs font-bold">Feuille de Route</p>
+            <h1 class="font-serif text-5xl md:text-8xl mb-6 leading-tight drop-shadow-lg">FRANCOIS- FRANCE</h1>
+            <p class="font-sans text-lg md:text-xl text-gray-100 mb-10 font-medium max-w-2xl mx-auto leading-relaxed">L'Alsace Enchantée: Magie d'Hiver et Traditions</p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-bold mb-10">
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🗓️ Du 27 Décembre 2025 au 4 Janvier 2026</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">💰 2700€</span>
+                <span class="bg-white/20 backdrop-blur-md px-5 py-2 rounded-full border border-white/30 shadow-sm">🛬 Environ 14h avec escale depuis Olivier, Haiti</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="itineraire" class="max-w-6xl mx-auto px-4 py-16 relative">
+      <div class="text-center mb-16">
+            <h2 class="text-template-ocre font-bold tracking-normal text-4xl mt-2 uppercase font-serif">Votre Roadtrip</h2>
+      </div>
+
+        <div class="relative">
+            <div class="timeline-line"></div>
+            
+                <div id="jour-1" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 1</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Arrivée à Strasbourg, Douce Immersion</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après un long voyage, la capitale alsacienne vous accueille avec son charme hivernal. Prenez le temps de vous installer et de faire une première découverte tranquille des environs de votre hôtel, en vous imprégnant de l'atmosphère unique de la ville.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛬 <strong>Arrivée et installation</strong>: Atterrissez à l'aéroport de Strasbourg (SXB) ou arrivez en TGV depuis Paris. Rejoignez votre hôtel 3 étoiles pour déposer vos bagages et vous rafraîchir après le voyage.</li><li>🚶‍♂️ <strong>Première balade découverte</strong>: Promenez-vous dans les rues adjacentes à votre hébergement. Laissez-vous charmer par l'architecture typique et les lumières hivernales, une introduction douce à la ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour1.jpg" class="w-full h-64 object-cover" alt="Jour 1">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">ℹ️ Conseil d'arrivée</p>
+                                <p class="text-gray-700">Depuis l'aéroport de Strasbourg, une navette train relie la gare centrale en moins de 10 minutes, très pratique pour rejoindre le centre-ville.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-2" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 2</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Cœur Historique et Lumières de Noël</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Plongez au cœur de Strasbourg, classée au patrimoine mondial de l'UNESCO. La journée sera dédiée à l'exploration de ses sites emblématiques, encore parés de leurs décorations de fin d'année, offrant une ambiance féerique et inoubliable.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>⛪ <strong>Majestueuse Cathédrale Notre-Dame</strong>: Admirez la façade gothique de la Cathédrale Notre-Dame et son horloge astronomique, un chef-d'œuvre médiéval qui raconte le temps de manière fascinante. Montez à la plateforme pour une vue imprenable sur la ville.</li><li>🏘️ <strong>Flânerie dans la Petite France</strong>: Perdez-vous dans les ruelles pavées de la Petite France, le quartier le plus pittoresque de Strasbourg, avec ses maisons à colombages et ses canaux. C'est l'endroit idéal pour des photos mémorables.</li><li>🍷 <strong>Dégustation de vin chaud et bredele</strong>: Profitez de l'ambiance des derniers marchés de Noël ou des chalets éphémères pour savourer un vin chaud épicé et des "bredele", les petits gâteaux de Noël alsaciens.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour2.jpg" class="w-full h-64 object-cover" alt="Jour 2">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">💡 Astuce Cathédrale</p>
+                                <p class="text-gray-700">Arrivez tôt le matin pour visiter la Cathédrale et monter à la plateforme, afin d'éviter les foules et profiter pleinement de la vue.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">📸 Spot photo</p>
+                                <p class="text-gray-700">Les Ponts Couverts et le Barrage Vauban offrent des panoramas superbes sur la Petite France, surtout au coucher du soleil.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-3" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 3</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Culture et Institutions Européennes</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Strasbourg n'est pas seulement historique, c'est aussi un centre européen majeur. Cette journée vous fera découvrir son rôle international et ses musées riches en histoire et en art, offrant un contraste intéressant avec le charme médiéval de la veille.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🇪🇺 <strong>Visite du Parlement Européen</strong>: Explorez le "Parlamentarium" ou assistez à une séance plénière (selon le calendrier). Découvrez le fonctionnement de cette institution clé de l'Union Européenne.</li><li>🖼️ <strong>Musée Alsacien ou Musée des Beaux-Arts</strong>: Choisissez entre le Musée Alsacien pour une immersion dans les traditions populaires régionales, ou le Musée des Beaux-Arts pour admirer des œuvres de grands maîtres européens. Les deux offrent une richesse culturelle unique.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour3.jpg" class="w-full h-64 object-cover" alt="Jour 3">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚌 Accès Parlement</p>
+                                <p class="text-gray-700">Le Parlement Européen est accessible en tramway (ligne E, arrêt "Droits de l'Homme"). Prévoyez une pièce d'identité pour la visite.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">👨‍👩‍👧‍👦 Pour les familles</p>
+                                <p class="text-gray-700">Le Vaisseau, un centre de découverte scientifique, est une excellente option pour les enfants et les adultes curieux.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-4" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 4</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Évasion au Château du Haut-Kœnigsbourg</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, quittez la ville pour une excursion majestueuse. Le Château du Haut-Kœnigsbourg, perché sur sa montagne, offre une plongée fascinante dans l'histoire médiévale de l'Alsace et des vues panoramiques époustouflantes sur la plaine.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🏰 <strong>Exploration du Château du Haut-Kœnigsbourg</strong>: Visitez cette forteresse médiévale entièrement restaurée. Ses salles, son donjon et ses remparts vous transporteront à travers les siècles. La vue sur la plaine d'Alsace est spectaculaire.</li><li>🍇 <strong>Découverte d'un village de la Route des Vins</strong>: Sur le chemin du retour, arrêtez-vous dans un charmant village alsacien comme Riquewihr ou Ribeauvillé. Flânez dans ses rues colorées et dégustez un vin local dans une cave traditionnelle.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour4.jpg" class="w-full h-64 object-cover" alt="Jour 4">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚗 Transport</p>
+                                <p class="text-gray-700">La location d'une voiture est recommandée pour cette journée afin de profiter pleinement de la flexibilité et des paysages de la Route des Vins. Des navettes existent aussi depuis Sélestat.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍷 Dégustation</p>
+                                <p class="text-gray-700">N'hésitez pas à entrer dans une cave pour une dégustation de Riesling ou de Gewürztraminer, des vins emblématiques d'Alsace.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-5" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 5</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Réveillon du Nouvel An à Strasbourg</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Préparez-vous à célébrer le passage à la nouvelle année dans l'ambiance festive de Strasbourg. La journée sera plus détendue pour vous permettre de vous préparer à la soirée spéciale, entre dîner gastronomique et festivités urbaines.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛍️ <strong>Shopping et dernières emplettes</strong>: Profitez de la matinée pour faire du shopping dans les boutiques du centre-ville ou acheter des souvenirs. C'est aussi l'occasion de trouver une tenue pour la soirée du réveillon.</li><li>🍽️ <strong>Dîner de Réveillon</strong>: Réservez une table dans un restaurant proposant un menu spécial Nouvel An. L'Alsace est réputée pour sa gastronomie, une belle occasion de savourer des plats raffinés.</li><li>🎉 <strong>Festivités du Nouvel An</strong>: Rejoignez les places principales de Strasbourg pour assister aux animations et au compte à rebours. Les feux d'artifice sont généralement interdits en centre-ville, mais l'ambiance reste très festive et conviviale.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour5.jpg" class="w-full h-64 object-cover" alt="Jour 5">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Réservation</p>
+                                <p class="text-gray-700">Il est impératif de réserver votre restaurant pour le dîner du 31 décembre plusieurs semaines à l'avance, les places sont très prisées.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🥂 Tradition</p>
+                                <p class="text-gray-700">Le "Crémant d'Alsace" est le vin effervescent local, parfait pour trinquer à la nouvelle année.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-6" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ciel rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 6</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Jour de l'An et Détente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Après les festivités de la veille, cette journée sera placée sous le signe de la détente et de la récupération. Profitez de la tranquillité du Jour de l'An pour vous reposer, faire une balade paisible ou visiter un lieu moins fréquenté.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>😴 <strong>Matinée libre et brunch</strong>: Commencez l'année en douceur avec une grasse matinée. De nombreux hôtels et restaurants proposent des brunchs spéciaux pour le Jour de l'An, une excellente option pour un repas tardif et copieux.</li><li>🚶‍♀️ <strong>Balade au Parc de l'Orangerie</strong>: Profitez de l'après-midi pour une promenade relaxante au Parc de l'Orangerie. C'est le plus ancien parc de Strasbourg, idéal pour prendre l'air et admirer les cigognes, emblèmes de l'Alsace.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour6.jpg" class="w-full h-64 object-cover" alt="Jour 6">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⚠️ Ouvertures</p>
+                                <p class="text-gray-700">De nombreux commerces et musées sont fermés le 1er janvier. Vérifiez les horaires à l'avance pour les activités prévues.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🦢 Les cigognes</p>
+                                <p class="text-gray-700">Le Parc de l'Orangerie abrite un centre de réintroduction des cigognes, vous aurez de bonnes chances d'en apercevoir.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-7" class="section-etape relative z-10 mb-20 md:flex md:flex-row-reverse md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-roche rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-left md:pl-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 7</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Charme de Colmar et ses Environs</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">Aujourd'hui, partez à la découverte de Colmar, souvent surnommée la "Petite Venise" d'Alsace. Ses quartiers pittoresques et son ambiance unique en font une étape incontournable, complétée par la visite d'un village voisin.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🛶 <strong>Exploration de la Petite Venise de Colmar</strong>: Flânez dans le quartier de la Petite Venise, admirez les maisons colorées à colombages le long des canaux. Une balade en barque est possible si le temps le permet, offrant une perspective différente.</li><li>🎨 <strong>Musée Unterlinden et Retable d'Issenheim</strong>: Visitez le célèbre Musée Unterlinden, qui abrite le chef-d'œuvre de Grünewald, le Retable d'Issenheim. C'est une expérience artistique et spirituelle majeure.</li><li>🌸 <strong>Visite d'Eguisheim, village préféré des Français</strong>: Terminez la journée par Eguisheim, un village circulaire classé parmi les plus beaux de France. Ses ruelles fleuries (même en hiver, le charme opère) et son architecture médiévale sont un enchantement.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pr-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour7.jpg" class="w-full h-64 object-cover" alt="Jour 7">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🚆 Accès à Colmar</p>
+                                <p class="text-gray-700">Colmar est facilement accessible en train depuis Strasbourg (environ 30 minutes). Des bus locaux desservent ensuite Eguisheim.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">🍽️ Spécialité locale</p>
+                                <p class="text-gray-700">Goûtez la "tarte flambée" (Flammekueche), une spécialité alsacienne à base de pâte fine, crème, oignons et lardons, souvent cuite au feu de bois.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="jour-8" class="section-etape relative z-10 mb-20 md:flex  md:justify-between items-start group scroll-mt-32">
+                    <div class="absolute left-6 md:left-1/2 transform -translate-x-1/2 w-8 h-8 bg-template-ocre rounded-full border-4 border-white shadow-lg flex items-center justify-center z-20"></div>
+                    
+                    <div class="md:w-[45%] pl-14 md:text-right md:pr-12">
+                        <span class="font-serif text-3xl block text-template-roche mb-2 font-bold">Jour 8</span>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Derniers Instants et Départ</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-4">C'est le dernier jour de votre séjour alsacien. Profitez de ces dernières heures pour faire quelques achats de dernière minute, savourer un dernier repas typique ou revisiter un lieu coup de cœur avant de prendre le chemin du retour, la tête pleine de souvenirs.</p>
+                        <ul class="text-sm text-gray-700 space-y-2 inline-block text-left font-medium">
+                            <li>🎁 <strong>Achats de souvenirs ou marché couvert</strong>: Faites vos dernières emplettes de produits locaux (moutarde, pain d'épices, poteries) ou visitez le marché couvert de Strasbourg pour des spécialités gourmandes.</li><li>🍽️ <strong>Dernier repas alsacien</strong>: Savourez un dernier repas dans un "winstub" traditionnel, pour goûter une dernière fois aux saveurs de l'Alsace avant votre départ.</li><li>🛫 <strong>Départ de Strasbourg</strong>: Rejoignez l'aéroport de Strasbourg (SXB) ou la gare TGV pour votre vol ou train de retour vers Olivier, Haiti, via Paris ou une autre grande ville.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="pl-14 md:w-[45%] mt-6 md:mt-0 md:pl-12">
+                        <div class="rounded-xl overflow-hidden shadow-lg mb-4">
+                            <img src="https://raw.githubusercontent.com/mytripplanner-dotfr/Francois-france-4lz3cb5hqnii433/main/jour8.jpg" class="w-full h-64 object-cover" alt="Jour 8">
+                        </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">⏰ Temps de trajet</p>
+                                <p class="text-gray-700">Prévoyez suffisamment de temps pour le trajet vers l'aéroport ou la gare, surtout si vous avez des correspondances serrées.</p>
+                            </div>
+                        
+                            <div class="tip-card p-4 rounded-r-lg text-sm mb-2">
+                                <p class="font-bold text-template-ocre mb-1">✈️ Enregistrement</p>
+                                <p class="text-gray-700">Vérifiez les exigences d'enregistrement et de bagages de votre compagnie aérienne avant de partir pour l'aéroport.</p>
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+    </section>
+
+    <section id="pratique" class="bg-white border-t border-gray-200 pt-12 pb-12 scroll-mt-24">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>💴</span> Budget
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget vol: </strong>1200€/pers (Vol aller-retour Olivier, Haiti - Strasbourg, France avec escale, classe économique)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget transports: </strong>250€/pers (TGV Paris-Strasbourg, transports en commun Strasbourg, location voiture 1 jour ou navettes)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget repas: </strong>400€/pers (8 jours, repas de type moyen, incluant un dîner de réveillon)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget logement: </strong>700€/pers (7 nuits en hôtel 3 étoiles, base chambre double partagée)</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2"><strong>Budget activités: </strong>150€/pers (Entrées musées, château, dégustations, petites activités)</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>☀️</span> Périodes Idéales
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">Les périodes idéales pour ce séjour sont les mois de décembre et janvier pour l'ambiance des marchés de Noël et les festivités de fin d'année.</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>📃</span> Infos pratiques
+                </h4>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">🗣️ La population alsacienne est réputée pour son sens de l'accueil et sa fierté de ses traditions. Le français est la langue officielle, mais l'allemand est aussi parlé par certains, et l'alsacien est un dialecte régional.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">💳 La France est un pays de l'Union Européenne, la monnaie est l'Euro (€). Les cartes de crédit sont largement acceptées, mais un peu de liquide est utile pour les petits commerces ou marchés.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">❄️ En hiver (décembre-janvier), les températures en Alsace peuvent être froides, souvent entre 0°C et 5°C, avec des possibilités de neige. Prévoyez des vêtements chauds, un manteau imperméable, des gants et un bonnet.</p>
+                
+                    <p class="text-sm text-gray-600 leading-relaxed mb-2">✨ Une info insolite: Strasbourg est la seule ville au monde dont le centre historique est entièrement classé au patrimoine mondial de l'UNESCO. C'est aussi la capitale européenne de Noël!</p>
+                
+            </div>
+            <div>
+                <h4 class="font-serif text-xl mb-4 text-template-roche flex items-center gap-2 font-bold">
+                    <span>🔗</span> Liens Utiles
+                </h4>
+                <ul class="text-sm space-y-3">
+                  <li><a href="https://mytripplanner-dotfr.github.io/Francois-france-4lz3cb5hqnii433/map.html" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🗺️ Carte Interactive</strong></a></li>
+                    
+                        <li><a href="https://www.visitstrasbourg.fr/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>📘 Strasbourg Tourisme</strong></a></li>
+                    
+                        <li><a href="https://www.sncf-connect.com/" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🚆 SNCF Connect</strong></a></li>
+                    
+                        <li><a href="https://www.meteofrance.com/previsions-meteo-france/alsace/67" target="_blank" class="hover:text-template-ocre transition flex items-center gap-2"><strong>🌤️ Météo France</strong></a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 border-t border-slate-200 py-6">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="font-serif text-lg text-template-roche mb-2 font-bold">
+                MyTrip<span class="text-template-ocre">Planner</span>
+            </p>
+
+                <div class="flex justify-center gap-4 text-[10px] md:text-xs text-slate-500 mb-4 font-semibold">
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Mentions Légales</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">CGU</a>
+                    <a href="#" class="hover:text-brand-primary transition hover:underline">Confidentialité</a>
+                </div>
+
+            <p class="text-[10px] text-gray-400 mb-2">
+                &copy; 2025 MyTripPlanner. Tous droits réservés.
+            </p>
+
+            <div class="flex justify-center">
+                <p class="text-[10px] text-gray-400 uppercase tracking-widest px-2 py-0.5 border border-gray-200 rounded-full inline-block">
+                    🤖 Contenu généré par IA
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Gestion Scroll & Menu
+        const navDesktop = document.getElementById('nav-desktop');
+        const navMobile = document.getElementById('nav-mobile');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                navDesktop.classList.remove('-translate-y-full');
+                navMobile.classList.remove('-translate-y-full');
+            } else {
+                navDesktop.classList.add('-translate-y-full');
+                navMobile.classList.add('-translate-y-full');
+            }
+        });
+
+        // Active Link Highlighter
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.id;
+                    document.querySelectorAll('.mobile-link').forEach(link => {
+                        const linkHref = link.getAttribute('href').substring(1);
+                        if (linkHref === activeId) {
+                            link.classList.remove('bg-gray-100', 'text-gray-700');
+                            link.classList.add('bg-template-ocre', 'text-white', 'shadow-md');
+                            link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                        } else {
+                            link.classList.add('bg-gray-100', 'text-gray-700');
+                            link.classList.remove('bg-template-ocre', 'text-white', 'shadow-md');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -60% 0px' });
+
+        document.querySelectorAll('div[id^="jour-"], section#pratique').forEach(s => observer.observe(s));
+    </script>
+</body>
+</html>
